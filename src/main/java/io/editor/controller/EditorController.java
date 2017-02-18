@@ -10,8 +10,13 @@ import lombok.Data;
 public class EditorController {
 	
 	@GetMapping("/hello")
-	public Member hello(){
-		return new Member(1L,"hong");
+	public TestMoc hello(){
+		
+		TestMoc result = new TestMoc();
+		result.setName("tttt");
+		result.setNumber(1111);
+		
+		return result;
 	}
 
 }
@@ -22,6 +27,6 @@ class Member {
 	public Member(long l, String string) {
 		// TODO Auto-generated constructor stub
 	}
-	private Long id;
+	int id;
 	private String name;
 }
